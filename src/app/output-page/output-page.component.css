@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 h2 {
   font-size: 28px;
 }
@@ -83,7 +84,21 @@ address{
 .print-btn:active {
   background-color: rgb(161, 22, 22);
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .body-cv {
+    width: 800px;
+    margin-top: 50px;
+  }
+
+}
+@media (max-width: 770px) {
+  .body-cv {
+    width: 600px;
+    margin-top: 50px;
+  }
+
+}
+@media (max-width: 605px) {
   .body-cv {
     width: 500px;
     margin-top: 50px;
@@ -91,10 +106,7 @@ address{
 
 }
 @media (max-height: 770px) {
-  .body-cv {
-    width: 500px;
   
-  }
   .print-btn{
     margin-top: 100px;
   }
