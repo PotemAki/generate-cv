@@ -16,7 +16,7 @@
       <app-experience-details [@fadeInOut]="isActiveButton3" *ngIf="isActiveButton3"></app-experience-details>
       <app-additional-details [@fadeInOut]="isActiveButton4" *ngIf="isActiveButton4"></app-additional-details>
     </div>
-    <div class="popup-container" [@fadeInOut]="isGenerating" *ngIf="isGenerating">
+    <div class="popup-container" *ngIf="isGenerating">
       <div class="popup-content">
       <app-output-page (closeButton)="closeButton1()"></app-output-page>
       
