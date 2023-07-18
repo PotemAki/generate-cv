@@ -83,12 +83,19 @@ address{
 .print-btn:active {
   background-color: rgb(161, 22, 22);
 }
-@media (max-width: 950px) {
+@media (max-width: 900px) {
   .body-cv {
+    width: 500px;
+    margin-top: 50px;
+  }
 
+}
+@media (max-height: 770px) {
+  .body-cv {
     width: 500px;
   
-   
   }
-  
+  .print-btn{
+    margin-top: 100px;
+  }
 }
