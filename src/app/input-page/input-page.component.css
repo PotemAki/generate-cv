@@ -51,4 +51,25 @@
    
     flex-direction: row
   }
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  
+}
+@media (max-width: 490px) {
+  .boxes {
+    flex-direction: column;
+  }
+  .button-list{
+    display: flex;
+    flex-direction: column
+   
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
 }

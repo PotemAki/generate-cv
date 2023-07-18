@@ -77,9 +77,18 @@ address{
 }
 .print-btn {
   width: 200px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-right: 5px;
 }
 .print-btn:active {
   background-color: rgb(161, 22, 22);
+}
+@media (max-width: 950px) {
+  .body-cv {
+
+    width: 500px;
+  
+   
+  }
+  
 }
