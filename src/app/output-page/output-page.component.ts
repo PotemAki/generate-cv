@@ -1,8 +1,5 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
-
-import { jsPDF } from "jspdf";
-import html2canvas from 'html2canvas';
 import * as html2pdf from 'html2pdf.js';
 import { Subscription } from 'rxjs/internal/Subscription';
 
