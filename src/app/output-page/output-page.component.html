@@ -2,7 +2,7 @@
   <div class="container" id="printCV">
     
     <header>
-      <img *ngIf="!previewUrl" class="cv-icon2" src="../../assets/cv.png" width="100px"/>
+      <img *ngIf="!previewUrl" class="cv-icon2" src="assets/cv.png" width="100px"/>
       <img *ngIf="previewUrl" class="cv-icon" [src]="previewUrl" width="100px"/>
       <div>
       <h1 class="name">{{userName}} {{userSurname}}</h1>
@@ -10,10 +10,10 @@
       </div>
       <address>
           <ul class="address-details">
-              <li><b><img class="address-icon" src="../../assets/phone icon.png"/>Phone:</b> {{userPhone}}</li>
-              <li><b><img class="address-icon" src="../../assets/email icon.png"/>Email:</b> {{userEmail}}</li>
-              <li><b><img class="address-icon" src="../../assets/birth icon.png"/>Date of birth:</b> {{userBirth}}</li>
-              <li><b><img class="address-icon" src="../../assets/home icon.png"/>Home:</b> {{userCity}}</li>
+              <li><b><img class="address-icon" src="assets/phone icon.png"/>Phone:</b> {{userPhone}}</li>
+              <li><b><img class="address-icon" src="assets/email icon.png"/>Email:</b> {{userEmail}}</li>
+              <li><b><img class="address-icon" src="assets/birth icon.png"/>Date of birth:</b> {{userBirth}}</li>
+              <li><b><img class="address-icon" src="assets/home icon.png"/>Home:</b> {{userCity}}</li>
           </ul>
       </address>
   </header>
@@ -25,7 +25,7 @@
     </section>
     <hr>
     <section class="title">
-        <h2><img class="section-icon" src="../../assets/education-icon.png"/>Education</h2>
+        <h2><img class="section-icon" src="assets/education-icon.png"/>Education</h2>
         <ul>
             <div *ngIf="eduName4 && eduType4 && (isCourses === 'edu')">
                 <li><b>{{eduType4}}</b></li>
@@ -62,7 +62,7 @@
     </section>
   
     <section class="title" *ngIf="jobTitle1 || jobTitle2 || jobTitle3 || jobTitle4">
-        <h2><img class="section-icon" src="../../assets/work-icon.png"/>Work Experience</h2>
+        <h2><img class="section-icon" src="assets/work-icon.png"/>Work Experience</h2>
         <ul>
             <li *ngIf="jobTitle4">
                 <b>{{jobTitle4}}</b> <span *ngIf="jobDate4"> ({{jobDate4}})</span><br>
@@ -96,7 +96,7 @@
         <hr>
     </div>
     <section class="title">
-        <h2><img class="section-icon" src="../../assets/lang-icon.png"/>Languages</h2>
+        <h2><img class="section-icon" src="assets/lang-icon.png"/>Languages</h2>
         <ul>
             <li *ngIf="langName1"><b>{{langName1}}</b> 
                 <span *ngIf="langlvl1"> - {{langlvl1}}</span></li>
@@ -110,7 +110,7 @@
     </section>
   
     <section class="title">
-        <h2><img class="section-icon" src="../../assets/info-icon.png"/>Additional Information</h2>
+        <h2><img class="section-icon" src="assets/info-icon.png"/>Additional Information</h2>
         <ul>
             <li *ngIf="info1">{{info1}}</li>
             <li *ngIf="info2">{{info2}}</li>
