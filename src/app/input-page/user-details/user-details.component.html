@@ -1,0 +1,131 @@
+<div class="row">
+  <div class="col-md-6">
+    <form (ngSubmit)="getUserDetails(u)" #u="ngForm">
+      <div class="form-group">
+        <li class="list-group-item">
+          <div class="card">
+            <div class="group-content">
+              <label for="nameInput" class="category-title" style="margin-top: 10px;">Your details:</label>
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameInput" class="card-title">Name</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input" 
+                    name="name"
+                    ngModel
+                    maxlength="15"
+                    required
+                    placeholder="Enter your name">
+                </div>
+                <div class="col">
+                  <label for="surnameInput" class="card-title">Surname</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input" 
+                    name="surname"
+                    ngModel
+                    maxlength="15"
+                    required
+                    placeholder="Enter your surname">
+                </div>
+                <div class="col">
+                  <label for="nameInput" class="card-title">Your Postition</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input" 
+                    name="position"
+                    ngModel
+                    maxlength="40"
+                    placeholder="Enter your position">
+                </div>
+              </div>
+              <label for="nameInput" class="category-title" style="margin-top: 10px;">Address details:</label>
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameInput" class="card-title">Phone</label>
+                  <input 
+                    type="number" 
+                    class="form-control card-move card-input-address" 
+                    name="phone"
+                    ngModel
+                    maxlength="20"
+                    required
+                    placeholder="Enter your phone number">
+                </div>
+                <div class="col">
+                  <label for="surnameInput" class="card-title">Email</label>
+                  <input 
+                    type="email" 
+                    class="form-control card-move card-input-address" 
+                    name="email"
+                    ngModel
+                    maxlength="40"
+                    required
+                    placeholder="Enter your email">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameInput" class="card-title">Date of birth</label>
+                  <input 
+                    type="date" 
+                    class="form-control card-move card-input-address" 
+                    name="birth"
+                    ngModel
+                    maxlength="15"
+                    required
+                    placeholder="Enter your date of birth">
+                </div>
+                <div class="col">
+                  <label for="surnameInput" class="card-title">City</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-address" 
+                    name="city"
+                    maxlength="15"
+                    ngModel
+                    required
+                    placeholder="Enter your city">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="surnameInput" class="card-title">About me</label>
+                  <select class="form-control card-move card-aboutme" name="dropdown" [(ngModel)]="selectedOption" value="add">
+                    <option value="add">➱ I want to add "about me"</option>
+                    <option value="remove">➱ I don't want "about me"</option>
+                  </select>
+                <textarea *ngIf="selectedOption === 'add'"
+                  class="form-control card-move card-aboutme-content" 
+                  name="aboutme"
+                  maxlength="350"
+                  ngModel
+                  value=""
+                  placeholder="Write a bit about yourself."
+                ></textarea>
+              </div>
+              <button class="delete-button" type="button" (click)="resetButton()">Reset</button>
+            </div>
+            <div class="col">
+              <label for="picture" class="card-title">Add your photo or use default icon.</label>
+              <input 
+                type="file" 
+                class="form-control card-move card-photo" 
+                name="photo"
+                ngModel
+                accept="image/*"
+                placeholder="You can leave this empty."
+                (change)="onFileSelected($event)"
+                #photoInput>
+                <button class="delete-photo" type="button" (click)="deletePhoto()">X</button>
+            </div>
+            <button type="submit" class="btn btn-secondary" 
+            [disabled]="!u.valid"
+            >Add Your Details</button>
+            <span class="help-block" *ngIf="!u.valid">Please add all required details.</span>
+          </div>
+        </li>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.container {
+  margin-top: 50px;
+}
+.boxes{
+  display: flex;
+  justify-content: space-around;
+  /* flex: 1 1 50%; */
+  
+}
+@media (max-width: 1450px) {
+  .boxes {
+    flex-direction: column;
+    
+  }
+}

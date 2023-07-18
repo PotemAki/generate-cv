@@ -1,0 +1,134 @@
+<div class="body-cv">
+  <div class="container" id="printCV">
+    
+    <header>
+      <img *ngIf="!previewUrl" class="cv-icon2" src="../../assets/cv.png" width="100px"/>
+      <img *ngIf="previewUrl" class="cv-icon" [src]="previewUrl" width="100px"/>
+      <div>
+      <h1 class="name">{{userName}} {{userSurname}}</h1>
+      <span>{{userPosition}}</span>
+      </div>
+      <address>
+          <ul class="address-details">
+              <li><b><img class="address-icon" src="../../assets/phone icon.png"/>Phone:</b> {{userPhone}}</li>
+              <li><b><img class="address-icon" src="../../assets/email icon.png"/>Email:</b> {{userEmail}}</li>
+              <li><b><img class="address-icon" src="../../assets/birth icon.png"/>Date of birth:</b> {{userBirth}}</li>
+              <li><b><img class="address-icon" src="../../assets/home icon.png"/>Home:</b> {{userCity}}</li>
+          </ul>
+      </address>
+  </header>
+    <section *ngIf="addAboutMe === 'add' && aboutMe">
+        <h2>About me</h2>
+        <p *ngIf="aboutMe">
+            {{aboutMe}}
+        </p>
+    </section>
+    <hr>
+    <section class="title">
+        <h2><img class="section-icon" src="../../assets/education-icon.png"/>Education</h2>
+        <ul>
+            <div *ngIf="eduName4 && eduType4 && (isCourses === 'edu')">
+                <li><b>{{eduType4}}</b></li>
+                <ul>
+                <li>{{eduName4}}</li>
+                </ul>
+            </div>
+            <div  *ngIf="eduName3 && eduType3 && (isCourses === 'edu')">
+                <li><b>{{eduType3}}</b></li>
+                <ul>
+                <li>{{eduName3}}</li>
+                </ul>
+            </div>
+            <div  *ngIf="eduName2 && eduType2">
+                <li><b>{{eduType2}}</b></li>
+                <ul>
+                <li>{{eduName2}}</li>
+                </ul>
+            </div>
+            <li><b>{{eduType1}}</b></li>
+            <ul>
+                <li>{{eduName1}}</li>
+            </ul>
+            <div *ngIf="(isCourses === 'courses') && courseName1">
+                <li><b>Other development</b></li> 
+                <ul>
+                    <li *ngIf="courseName1">{{courseName1}}</li>
+                    <li *ngIf="courseName2">{{courseName2}}</li>
+                    <li *ngIf="courseName3">{{courseName3}}</li>
+                    <li *ngIf="courseName4">{{courseName4}}</li>
+                </ul>
+            </div>
+        </ul>
+    </section>
+  
+    <section class="title" *ngIf="jobTitle1 || jobTitle2 || jobTitle3 || jobTitle4">
+        <h2><img class="section-icon" src="../../assets/work-icon.png"/>Work Experience</h2>
+        <ul>
+            <li *ngIf="jobTitle4">
+                <b>{{jobTitle4}}</b> <span *ngIf="jobDate4"> ({{jobDate4}})</span><br>
+                <i>{{jobWhere4}}</i>
+            </li>
+            <li *ngIf="jobTitle3">
+                <b>{{jobTitle3}}</b> <span *ngIf="jobDate3"> ({{jobDate3}})</span><br>
+                <i>{{jobWhere3}}</i>
+            </li>
+            <li *ngIf="jobTitle2">
+                <b>{{jobTitle2}}</b> <span *ngIf="jobDate2"> ({{jobDate2}})</span><br>
+                <i>{{jobWhere2}}</i>
+                <ul>
+                    <li *ngIf="jobDetail21">{{jobDetail21}}</li>
+                    <li *ngIf="jobDetail22">{{jobDetail22}}</li>
+                    <li *ngIf="jobDetail23">{{jobDetail23}}</li>
+                </ul>
+            </li>
+            <li *ngIf="jobTitle1">
+                <b>{{jobTitle1}}</b> <span *ngIf="jobDate1"> ({{jobDate1}})</span><br>
+                <i>{{jobWhere1}}</i>
+                <ul>
+                    <li *ngIf="jobDetail11">{{jobDetail11}}</li>
+                    <li *ngIf="jobDetail12">{{jobDetail12}}</li>
+                    <li *ngIf="jobDetail13">{{jobDetail13}}</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <div *ngIf="jobTitle1 || jobTitle2 || jobTitle3 || jobTitle4">
+        <hr>
+    </div>
+    <section class="title">
+        <h2><img class="section-icon" src="../../assets/lang-icon.png"/>Languages</h2>
+        <ul>
+            <li *ngIf="langName1"><b>{{langName1}}</b> 
+                <span *ngIf="langlvl1"> - {{langlvl1}}</span></li>
+            <li *ngIf="langName2"><b>{{langName2}}</b> 
+                <span *ngIf="langlvl2"> - {{langlvl2}}</span></li>
+            <li *ngIf="langName3"><b>{{langName3}}</b> 
+                <span *ngIf="langlvl3"> - {{langlvl3}}</span></li>
+            <li *ngIf="langName4"><b>{{langName4}}</b> 
+                <span *ngIf="langlvl4"> - {{langlvl4}}</span></li>
+        </ul>
+    </section>
+  
+    <section class="title">
+        <h2><img class="section-icon" src="../../assets/info-icon.png"/>Additional Information</h2>
+        <ul>
+            <li *ngIf="info1">{{info1}}</li>
+            <li *ngIf="info2">{{info2}}</li>
+            <li *ngIf="info3">{{info3}}</li>
+            <li *ngIf="info4">{{info4}}</li>
+            <li *ngIf="info5">{{info5}}</li>
+            <li *ngIf="info6">{{info6}}</li>
+            <li *ngIf="info7">{{info7}}</li>
+        </ul>
+    </section>
+  
+    <section *ngIf="dropdownEnclosure === 'add'">
+        <hr>
+        <p *ngIf="enclosure">
+            {{enclosure}}
+        </p>
+    </section>
+  </div>  
+</div>
+
+<button type="button" class="btn btn-secondary" style="margin-left: 20px;" (click)="download()">Download CV</button>

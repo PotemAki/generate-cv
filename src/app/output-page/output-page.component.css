@@ -1,0 +1,70 @@
+.body-cv {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin: 20px;
+  width: 800px;
+}
+h2 {
+  font-size: 28px;
+}
+
+h1 {
+  font-size: 36px;
+}
+span {
+  color: grey;
+}
+section,
+header {
+  padding: 10px 60px 20px 60px;
+  background-color: white;
+}
+.container {
+  box-shadow: 0 0 20px grey;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header ul {
+  list-style: none;
+}
+header li {
+
+  margin-bottom: 15px;
+}
+address{
+  margin-top: 20px;
+  margin-left: -10px;
+}
+.cv-icon {
+  width: 200px;
+  height: 200px;
+  padding: 20px 0px 0px 0px;
+  margin-right: 20px;
+  margin-left: -30px;
+}
+.address-icon {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+.section-icon {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+.title {
+  margin-bottom: -40px;
+}
+.name {
+  margin-bottom: 10px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}

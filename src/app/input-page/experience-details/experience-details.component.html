@@ -1,0 +1,213 @@
+<div class="row">
+  <div class="col-md-6">
+    <form (ngSubmit)="getEduDetails(w)" #w="ngForm">
+      <div class="form-group">
+        <li class="list-group-item">
+          <div class="card">
+            <div class="group-content">
+              <label for="nameInput" class="category-title" style="margin-top: 10px; margin-bottom: 10px;">Work Experience:</label>
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameInput" class="card-title">1. Work title:</label>
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="jobtitle1"
+                    ngModel
+                    maxlength="90"
+                    placeholder="Administrator">
+                  <div class="col">
+                    <label for="nameInput" class="card-title">When did you work?</label>
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="jobdate1"
+                    ngModel
+                    maxlength="90"
+                    placeholder="E.g: 01/01/2021 - 31/06/2022">
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="nameInput" class="card-title">Where?</label>
+                  <input 
+                  type="text" 
+                  class="form-control card-move card-input-school-name" 
+                  name="jobwhere1"
+                  ngModel
+                  maxlength="90"
+                  placeholder="E.g: Warsaw, Google">
+                  <button *ngIf="!isPlus1" type="button" class="btn plusButton btn-secondary" 
+                  (click)="onPlus1()"
+                  >+</button>
+                  <button *ngIf="isPlus1" type="button" class="btn plusButton btn-secondary" 
+                  (click)="onPlus1()"
+                  >-</button>
+                </div>
+              </div>
+              <div *ngIf="isPlus1">
+                <div class="col">
+                  <label for="nameInput" class="card-title">Your work details:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="jobdetail11"
+                    ngModel
+                    maxlength="90"
+                    placeholder="E.g. Collecting and organizing data.">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="jobdetail12"
+                    ngModel
+                    maxlength="90"
+                    placeholder="add work feature">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="jobdetail13"
+                    ngModel
+                    maxlength="90"
+                    placeholder="add work feature">
+                </div>
+              </div>
+              <hr>
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameInput" class="card-title">2. Work title:</label>
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="jobtitle2"
+                    ngModel
+                    maxlength="50">
+                  <div class="col">
+                    <label for="nameInput" class="card-title">When did you work?</label>
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="jobdate2"
+                    ngModel
+                    maxlength="50">
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="nameInput" class="card-title">Where?</label>
+                  <input 
+                  type="text" 
+                  class="form-control card-move card-input-school-name" 
+                  name="jobwhere2"
+                  ngModel
+                  maxlength="50"
+                 >
+                  <button *ngIf="!isPlus2" type="button" class="btn plusButton btn-secondary" 
+                  (click)="onPlus2()"
+                  >+</button>
+                  <button *ngIf="isPlus2" type="button" class="btn plusButton btn-secondary" 
+                  (click)="onPlus2()"
+                  >-</button>
+                </div>
+              </div>
+              <div *ngIf="isPlus2">
+                <div class="col">
+                  <label for="nameInput" class="card-title">Your work details:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="jobdetail21"
+                    ngModel
+                    maxlength="90"
+                    placeholder="add work feature">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="jobdetail22"
+                    ngModel
+                    maxlength="90"
+                    placeholder="add work feature">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="jobdetail23"
+                    ngModel
+                    maxlength="90"
+                    placeholder="add work feature">
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary" 
+              (click)="moreJobs()"
+              >{{buttonContent}}</button>
+              <!-- more work -->
+              <div *ngIf="isMoreJobs">
+                <hr>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="nameInput" class="card-title">3. Work title:</label>
+                      <input 
+                      type="text" 
+                      class="form-control card-move card-input-school-name" 
+                      name="jobtitle3"
+                      ngModel
+                      maxlength="50">
+                    <div class="col">
+                      <label for="nameInput" class="card-title">When did you work?</label>
+                      <input 
+                      type="text" 
+                      class="form-control card-move card-input-school-name" 
+                      name="jobdate3"
+                      ngModel
+                      maxlength="50">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="nameInput" class="card-title">Where?</label>
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="jobwhere3"
+                    ngModel
+                    maxlength="50">
+                  </div>
+                </div>
+                <hr>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="nameInput" class="card-title">4. Work title:</label>
+                      <input 
+                      type="text" 
+                      class="form-control card-move card-input-school-name" 
+                      name="jobtitle4"
+                      ngModel
+                      maxlength="50">
+                    <div class="col">
+                      <label for="nameInput" class="card-title">When did you work?</label>
+                      <input 
+                      type="text" 
+                      class="form-control card-move card-input-school-name" 
+                      name="jobdate4"
+                      ngModel
+                      maxlength="50">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="nameInput" class="card-title">Where?</label>
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="jobwhere4"
+                    ngModel
+                    maxlength="50">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <button class="delete-button" type="button" (click)="resetButton()">Reset</button>
+            </div>
+            <button type="submit" class="btn btn-secondary" 
+            [disabled]="false"
+            >Add Experience</button>
+          </div>
+        </li>
+      </div>
+    </form>
+  </div>
+</div>

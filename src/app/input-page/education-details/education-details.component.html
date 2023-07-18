@@ -1,0 +1,147 @@
+<div class="row">
+  <div class="col-md-6">
+    <form (ngSubmit)="getEduDetails(e)" #e="ngForm">
+      <div class="form-group">
+        <li class="list-group-item">
+          <div class="card">
+            <div class="group-content">
+              <label for="nameInput" class="category-title" style="margin-top: 10px; margin-bottom: 10px;">Education:</label>
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameInput" class="card-title">1. Education type:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="edutype1"
+                    ngModel
+                    maxlength="50"
+                    required
+                    placeholder="E.g: Master in Management">
+                    <label for="nameInput" class="card-title">Full facility name:</label>
+                    <textarea
+                    type="text" 
+                    class="form-control card-move card-input-school-type" 
+                    name="eduname1"
+                    ngModel
+                    maxlength="90"
+                    required
+                    placeholder="E.g: University of Warsaw"></textarea>
+                </div>
+                <div class="col">
+                  <label for="nameInput" class="card-title">2. Education type:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="edutype2"
+                    ngModel
+                    maxlength="50"
+                    placeholder="E.g: High School">
+                    <label for="nameInput" class="card-title">Full facility name:</label>
+                    <textarea
+                    type="text" 
+                    class="form-control card-move card-input-school-type" 
+                    name="eduname2"
+                    ngModel
+                    maxlength="90"
+                    placeholder="E.g: Public High School in Warsaw"></textarea>
+                </div>
+              </div>
+              <label for="surnameInput" class="card-title">More options?</label>
+                  <select 
+                  class="form-control card-move card-aboutme" 
+                  name="dropdown" 
+                  ngModel
+                  #course="ngModel" 
+                  value="edu"
+                  [(ngModel)]="selectedOption">
+                    <option class="option-choice" value="none">I don't want additional fields.</option>
+                    <option class="option-choice" value="edu">I want to add more school rows.</option>
+                    <option value="courses">I want to add courses.</option>
+                  </select>
+                  
+              <!-- more edu -->
+              <div class="form-row" *ngIf="course.value === 'edu'">
+                <div class="col">
+                  <label for="nameInput" class="card-title">3. Education type:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="edutype3"
+                    ngModel
+                    maxlength="50"
+                    placeholder="Other">
+                    <label for="nameInput" class="card-title">Full facility name:</label>
+                    <textarea
+                    type="text" 
+                    class="form-control card-move card-input-school-type" 
+                    name="eduname3"
+                    ngModel
+                    maxlength="90"
+                    placeholder="Other"></textarea>
+                </div>
+                <div class="col">
+                  <label for="nameInput" class="card-title">4. Education type:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-school-name" 
+                    name="edutype4"
+                    ngModel
+                    maxlength="50"
+                    placeholder="Other">
+                    <label for="nameInput" class="card-title">Full facility name:</label>
+                    <textarea
+                    type="text" 
+                    class="form-control card-move card-input-school-type" 
+                    name="eduname4"
+                    ngModel
+                    maxlength="90"
+                    placeholder="Other"></textarea>
+                </div>
+              </div>
+              <!-- courses -->
+              <div class="form-row" *ngIf="course.value === 'courses'">
+                <div class="col">
+                  <label for="nameInput" class="card-title">Courses:</label>
+                  <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="coursename1"
+                    ngModel
+                    maxlength="50"
+                    placeholder="1. Course name">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="coursename2"
+                    ngModel
+                    maxlength="50"
+                    placeholder="2. Course name">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="coursename3"
+                    ngModel
+                    maxlength="50"
+                    placeholder="3. Course name">
+                    <input 
+                    type="text" 
+                    class="form-control card-move card-input-course" 
+                    name="coursename4"
+                    ngModel
+                    maxlength="50"
+                    placeholder="4. Course name">
+                </div>
+              </div>
+              <hr>
+              <button class="delete-button" type="button" (click)="resetButton()">Reset</button>
+            </div>
+            <button type="submit" class="btn btn-secondary" 
+            [disabled]="false"
+            >Add Education</button>
+            <span class="help-block" *ngIf="!e.valid">Atleast one eduction type is required.</span>
+          </div>
+        </li>
+      </div>
+    </form>
+  </div>
+</div>
