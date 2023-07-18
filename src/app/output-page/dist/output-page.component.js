@@ -9,9 +9,11 @@ exports.__esModule = true;
 exports.OutputPageComponent = void 0;
 var core_1 = require("@angular/core");
 var html2pdf = require("html2pdf.js");
+var rxjs_1 = require("rxjs");
 var OutputPageComponent = /** @class */ (function () {
     function OutputPageComponent(dataService) {
         this.dataService = dataService;
+        this.closeButton = new rxjs_1.Subject();
         this.userName = 'Your';
         this.userSurname = 'Name';
         this.userPosition = '';
@@ -152,6 +154,9 @@ var OutputPageComponent = /** @class */ (function () {
             _this.enclosure = infoData.enclosure;
         });
     };
+    OutputPageComponent.prototype.closeButto = function () {
+        this.closeButton.next();
+    };
     OutputPageComponent.prototype.download = function () {
         var element = document.getElementById('printCV');
         var options = {
@@ -168,6 +173,9 @@ var OutputPageComponent = /** @class */ (function () {
         this.workSub.unsubscribe;
         this.infoSub.unsubscribe;
     };
+    __decorate([
+        core_1.Output()
+    ], OutputPageComponent.prototype, "closeButton");
     __decorate([
         core_1.ViewChild('myCV', { static: true })
     ], OutputPageComponent.prototype, "myTempRef");

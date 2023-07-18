@@ -16,6 +16,8 @@ var ExperienceDetailsComponent = /** @class */ (function () {
         this.isPlus1 = false;
         this.isPlus2 = false;
     }
+    ExperienceDetailsComponent.prototype.ngOnInit = function () {
+    };
     ExperienceDetailsComponent.prototype.moreJobs = function () {
         if (this.isMoreJobs) {
             this.isMoreJobs = false;

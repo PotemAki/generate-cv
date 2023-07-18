@@ -1,7 +1,8 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 import * as html2pdf from 'html2pdf.js';
 import { Subscription } from 'rxjs/internal/Subscription';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-output-page',
@@ -13,6 +14,8 @@ export class OutputPageComponent implements OnInit, OnDestroy{
   private eduSub: Subscription;
   private workSub: Subscription;
   private infoSub: Subscription
+  @Output() closeButton = new Subject<void>()
+  
     userName = 'Your';
     userSurname = 'Name'
     userPosition = '';
@@ -168,7 +171,9 @@ export class OutputPageComponent implements OnInit, OnDestroy{
         }
     )
   }
-
+  closeButto() {
+    this.closeButton.next()
+  }
 
   download() {
     const element = document.getElementById('printCV');

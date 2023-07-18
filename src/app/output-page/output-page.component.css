@@ -1,8 +1,15 @@
 .body-cv {
   margin-left: 20px;
   margin-bottom: 20px;
+  margin-top: 50px;
   margin: 20px;
-  width: 800px;
+  width: 1000px;
+  
+  max-height: 800px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h2 {
   font-size: 28px;
@@ -67,4 +74,12 @@ address{
   font-size: 40px;
   display: flex;
   align-items: center;
+}
+.print-btn {
+  width: 200px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.print-btn:active {
+  background-color: rgb(161, 22, 22);
 }

@@ -136,7 +136,7 @@
               <button class="delete-button" type="button" (click)="resetButton()">Reset</button>
             </div>
             <button type="submit" class="btn btn-secondary" 
-            [disabled]="false"
+            [disabled]="!e.valid"
             >Add Education</button>
             <span class="help-block" *ngIf="!e.valid">Atleast one eduction type is required.</span>
           </div>

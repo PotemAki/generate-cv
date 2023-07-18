@@ -19,6 +19,10 @@ var not_found_component_1 = require("./page-not-found/not-found/not-found.compon
 var input_page_component_1 = require("./input-page/input-page.component");
 var output_page_component_1 = require("./output-page/output-page.component");
 var user_details_component_1 = require("./input-page/user-details/user-details.component");
+var education_details_component_1 = require("./input-page/education-details/education-details.component");
+var experience_details_component_1 = require("./input-page/experience-details/experience-details.component");
+var additional_details_component_1 = require("./input-page/additional-details/additional-details.component");
+var animations_1 = require("@angular/platform-browser/animations");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -30,7 +34,10 @@ var AppModule = /** @class */ (function () {
                 not_found_component_1.NotFoundComponent,
                 input_page_component_1.InputPageComponent,
                 output_page_component_1.OutputPageComponent,
-                user_details_component_1.UserDetailsComponent
+                user_details_component_1.UserDetailsComponent,
+                education_details_component_1.EducationDetailsComponent,
+                experience_details_component_1.ExperienceDetailsComponent,
+                additional_details_component_1.AdditionalDetailsComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -39,6 +46,7 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 http_1.HttpClientModule,
                 ng_bootstrap_1.NgbDropdownModule,
+                animations_1.BrowserAnimationsModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

@@ -1,3 +1,11 @@
 .navbar {
   width: 100%;
 }
+.collapse {
+  justify-content: center;
+}
+@media (max-width: 840px) {
+  .navbar {
+    width: 1000px;
+  }
+}

@@ -12,8 +12,10 @@ export class DataService {
   eduData = new BehaviorSubject<eduData>(null)
   workData = new BehaviorSubject<jobData>(null)
   infoData = new BehaviorSubject<infoData>(null)
+  expForm: NgForm
 
   addUserData(form: NgForm) {
+    this.expForm = form
     const loadUserData = new dataUser(
       form.value.name,
       form.value.surname,

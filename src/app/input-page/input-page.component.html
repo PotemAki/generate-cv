@@ -3,11 +3,26 @@
   <h1>Put your details here.</h1>
   <hr>
   <div class="boxes">
-    <app-user-details></app-user-details>
-    <app-education-details></app-education-details>
+    <div class="button-list">
+      <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton1}" (click)="activateButton1()">Your Details</button>
+      <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton2}" (click)="activateButton2()">Education</button>
+      <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton3}" (click)="activateButton3()">Work Experience</button>
+      <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton4}" (click)="activateButton4()">Additional informations</button>
+      <button type="button" class="btn btn-secondary generate" [ngClass]="{activeGenerate: isGenerating}" (click)="generateButton()">Generate CV</button>
+    </div>
+    <div class="components">
+      <app-user-details [@fadeInOut]="isActiveButton1" *ngIf="isActiveButton1"></app-user-details>
+      <app-education-details [@fadeInOut]="isActiveButton2" *ngIf="isActiveButton2"></app-education-details>
+      <app-experience-details [@fadeInOut]="isActiveButton3" *ngIf="isActiveButton3"></app-experience-details>
+      <app-additional-details [@fadeInOut]="isActiveButton4" *ngIf="isActiveButton4"></app-additional-details>
+    </div>
+    <div class="popup-container" [@fadeInOut]="isGenerating" *ngIf="isGenerating">
+      <div class="popup-content">
+      <app-output-page (closeButton)="closeButton1()"></app-output-page>
+      
+      </div>
+    </div>
+    
   </div>
-  <div class="boxes">
-    <app-experience-details></app-experience-details>
-    <app-additional-details></app-additional-details>
   </div>
-  </div>
+  

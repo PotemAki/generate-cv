@@ -19,6 +19,7 @@ var DataService = /** @class */ (function () {
         this.infoData = new rxjs_1.BehaviorSubject(null);
     }
     DataService.prototype.addUserData = function (form) {
+        this.expForm = form;
         var loadUserData = new dataUser_model_1.dataUser(form.value.name, form.value.surname, form.value.email, form.value.phone, form.value.birth, form.value.city, form.value.position, form.value.dropdown, form.value.aboutme);
         this.userData.next(loadUserData);
     };

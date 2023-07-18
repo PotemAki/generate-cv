@@ -7,9 +7,9 @@ import { OutputPageComponent } from './output-page/output-page.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/input', pathMatch: 'full'},
-  { path: "input", component: InputPageComponent },
-  { path: 'output', component: OutputPageComponent},
+  { path: '', redirectTo: '/generate', pathMatch: 'full'},
+  { path: "generate", component: InputPageComponent },
+  // { path: 'output', component: OutputPageComponent},
   { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: '/not-found'}
 ];

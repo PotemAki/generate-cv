@@ -13,7 +13,7 @@ import { UserDetailsComponent } from './input-page/user-details/user-details.com
 import { EducationDetailsComponent } from './input-page/education-details/education-details.component';
 import { ExperienceDetailsComponent } from './input-page/experience-details/experience-details.component';
 import { AdditionalDetailsComponent } from './input-page/additional-details/additional-details.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { AdditionalDetailsComponent } from './input-page/additional-details/addi
     FormsModule,
     HttpClientModule,
     NgbDropdownModule,
-
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
