@@ -1,1 +1,1 @@
-https://github.com/PotemAki/generate-cv/settings/pages
+https://potemaki.github.io/generate-cv/
