@@ -42,7 +42,7 @@ var DataService = /** @class */ (function () {
         this.workData.next(loadWorkData);
     };
     DataService.prototype.addAdditionalInfo = function (form) {
-        var loadInfoData = new dataUser_model_1.infoData(form.value.langname1, form.value.langname2, form.value.langname3, form.value.langname4, form.value.langlvl1, form.value.langlvl2, form.value.langlvl3, form.value.langlvl4, form.value.info1, form.value.info2, form.value.info3, form.value.info4, form.value.info5, form.value.info6, form.value.info7, form.value.dropdownEnclosure, form.value.enclosure);
+        var loadInfoData = new dataUser_model_1.infoData(form.value.langname1, form.value.langname2, form.value.langname3, form.value.langname4, form.value.langlvl1, form.value.langlvl2, form.value.langlvl3, form.value.langlvl4, form.value.info1, form.value.info2, form.value.info3, form.value.info4, form.value.info5, form.value.info6, form.value.info7, form.value.dropdownEnclosure, form.value.enclosure, form.value.link, form.value.linkname);
         this.infoData.next(loadInfoData);
     };
     DataService = __decorate([

@@ -70,6 +70,8 @@ var OutputPageComponent = /** @class */ (function () {
         this.info5 = '';
         this.info6 = '';
         this.info7 = '';
+        this.link = '';
+        this.linkName = '';
         this.dropdownEnclosure = 'add';
         this.enclosure = 'I hereby give consent for my personal data included in the application to be processed by (company name) for the purposes of the recruitment process.';
         this.previewUrl = this.dataService.previewUrl;
@@ -152,6 +154,8 @@ var OutputPageComponent = /** @class */ (function () {
             _this.info7 = infoData.info7;
             _this.dropdownEnclosure = infoData.dropdownEnclosure;
             _this.enclosure = infoData.enclosure;
+            _this.link = infoData.link;
+            _this.linkName = infoData.linkname;
         });
     };
     OutputPageComponent.prototype.closeButto = function () {
@@ -162,8 +166,10 @@ var OutputPageComponent = /** @class */ (function () {
         var options = {
             filename: 'Generated-CV.pdf',
             image: { type: 'jpeg', quality: 2 },
-            html2canvas: { scale: 10 },
-            jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' } // Optional: Set PDF format and orientation
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            enableLinks: true,
+            pagebreak: { mode: 'avoid-all' }
         };
         html2pdf().set(options).from(element).save();
     };

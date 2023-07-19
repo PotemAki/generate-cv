@@ -51,5 +51,7 @@ export class InputPageComponent {
   }
   closeButton1() {
     this.isGenerating = false
+   
   }
+  
 }

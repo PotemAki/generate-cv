@@ -94,7 +94,9 @@ export class DataService {
       form.value.info6,
       form.value.info7,
       form.value.dropdownEnclosure,
-      form.value.enclosure
+      form.value.enclosure,
+      form.value.link,
+      form.value.linkname
     )
     this.infoData.next(loadInfoData)
   }

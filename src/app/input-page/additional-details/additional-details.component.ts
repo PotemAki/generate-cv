@@ -16,6 +16,7 @@ export class AdditionalDetailsComponent {
   infoPlus2 = false;
   infoPlus3 = false;
   selectedOption = 'add'
+  addLink = false
 
   constructor(private dataService: DataService) { }
 
@@ -37,7 +38,9 @@ export class AdditionalDetailsComponent {
   infoOnPlus3() {
     this.infoPlus3 = !this.infoPlus3
   }
-
+  checkLink() {
+    this.addLink = !this.addLink
+  }
 
   getAdditionalDetails(a: NgForm) {
     this.dataService.addAdditionalInfo(a)

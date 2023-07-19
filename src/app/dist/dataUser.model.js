@@ -60,7 +60,7 @@ var jobData = /** @class */ (function () {
 }());
 exports.jobData = jobData;
 var infoData = /** @class */ (function () {
-    function infoData(langname1, langname2, langname3, langname4, langlvl1, langlvl2, langlvl3, langlvl4, info1, info2, info3, info4, info5, info6, info7, dropdownEnclosure, enclosure) {
+    function infoData(langname1, langname2, langname3, langname4, langlvl1, langlvl2, langlvl3, langlvl4, info1, info2, info3, info4, info5, info6, info7, dropdownEnclosure, enclosure, link, linkname) {
         this.langname1 = langname1;
         this.langname2 = langname2;
         this.langname3 = langname3;
@@ -78,6 +78,8 @@ var infoData = /** @class */ (function () {
         this.info7 = info7;
         this.dropdownEnclosure = dropdownEnclosure;
         this.enclosure = enclosure;
+        this.link = link;
+        this.linkname = linkname;
     }
     return infoData;
 }());

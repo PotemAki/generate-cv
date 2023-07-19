@@ -18,6 +18,7 @@ var AdditionalDetailsComponent = /** @class */ (function () {
         this.infoPlus2 = false;
         this.infoPlus3 = false;
         this.selectedOption = 'add';
+        this.addLink = false;
     }
     AdditionalDetailsComponent.prototype.onPlus1 = function () {
         this.isPlus1 = !this.isPlus1;
@@ -36,6 +37,9 @@ var AdditionalDetailsComponent = /** @class */ (function () {
     };
     AdditionalDetailsComponent.prototype.infoOnPlus3 = function () {
         this.infoPlus3 = !this.infoPlus3;
+    };
+    AdditionalDetailsComponent.prototype.checkLink = function () {
+        this.addLink = !this.addLink;
     };
     AdditionalDetailsComponent.prototype.getAdditionalDetails = function (a) {
         this.dataService.addAdditionalInfo(a);

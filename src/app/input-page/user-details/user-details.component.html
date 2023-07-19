@@ -92,8 +92,8 @@
               <div class="form-group">
                 <label for="surnameInput" class="card-title">About me</label>
                   <select class="form-control card-move card-aboutme" name="dropdown" [(ngModel)]="selectedOption" value="add">
-                    <option value="add">➱ I want to add "about me"</option>
-                    <option value="remove">➱ I don't want "about me"</option>
+                    <option value="add">I want to add "about me"</option>
+                    <option value="remove">I don't want "about me"</option>
                   </select>
                 <textarea *ngIf="selectedOption === 'add'"
                   class="form-control card-move card-aboutme-content" 

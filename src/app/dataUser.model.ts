@@ -70,6 +70,8 @@ export class infoData {
     public info6?: string,
     public info7?: string,
     public dropdownEnclosure?: string,
-    public enclosure?: string
+    public enclosure?: string,
+    public link?: string,
+    public linkname?: string
     ) { }
 }

@@ -96,9 +96,6 @@
             </li>
         </ul>
     </section>
-    <div *ngIf="jobTitle1 || jobTitle2 || jobTitle3 || jobTitle4">
-        <hr>
-    </div>
     <section class="title">
         <h2><img class="section-icon" src="assets/lang-icon.png"/>Languages</h2>
         <ul>
@@ -112,10 +109,13 @@
                 <span *ngIf="langlvl4"> - {{langlvl4}}</span></li>
         </ul>
     </section>
-  
-    <section class="title">
+    
+    <section class="title html2pdf__page-break" *ngIf="info1 || info2 ||info3 ||info4 ||info5 ||info6 || info7 || (link && linkName)">
         <h2><img class="section-icon" src="assets/info-icon.png"/>Additional Information</h2>
         <ul>
+            <li *ngIf="link && linkName">
+                <a target="_blank" [href]="link">{{linkName}}</a>
+            </li>
             <li *ngIf="info1">{{info1}}</li>
             <li *ngIf="info2">{{info2}}</li>
             <li *ngIf="info3">{{info3}}</li>

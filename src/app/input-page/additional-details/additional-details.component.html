@@ -73,7 +73,36 @@
               <div>
                 <div class="col">
                   <label for="nameInput" class="category-title" style="margin-top: 10px; margin-bottom: 10px;">Additional informations:</label>
+                  <div class="checkbox">
+                    <input 
+                    class="form-check-input me-2" 
+                    type="checkbox" 
+                    value="" 
+                    id="addlink"
+                    ngModel
+                    #check="ngModel"
+                    name="addlink" (click)="checkLink()">
+                    <label class="form-check-label" for="registerCheck">
+                      Portfolio link?
+                    </label>
+                  </div>
+                  <div class="link-group" *ngIf="addLink" >
+                    <input
+                    type="text" 
+                    class="form-control card-move card-input-course input-link" 
+                    name="link"
+                    ngModel
+                    maxlength="50"
+                    placeholder="Put link to your portfolio here.">
                   <input 
+                    type="text" 
+                    class="form-control card-move card-input-course input-link" 
+                    name="linkname"
+                    ngModel
+                    maxlength="50"
+                    placeholder="Display name of this link.">
+                  </div>
+                  <input *ngIf="!addLink"
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info1"

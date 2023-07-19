@@ -112,6 +112,18 @@ input.ng-invalid.ng-touched {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+.checkbox{
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+.input-link{
+  width: 250px;
+  margin-right: 10px;
+}
+.link-group{
+  display: flex;
+  
+}
 @media (max-width: 774px) {
   .card {
     width: 100%;
