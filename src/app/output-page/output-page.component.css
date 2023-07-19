@@ -4,7 +4,7 @@
   margin-top: 50px;
   margin: 20px;
   width: 1000px;
-  
+  background-color: rgb(255, 255, 255);
   max-height: 800px;
   overflow: auto;
   display: flex;
@@ -93,21 +93,62 @@ address{
 }
 @media (max-width: 770px) {
   .body-cv {
-    width: 600px;
+    width: 800px;
     margin-top: 50px;
   }
 
 }
-@media (max-width: 605px) {
+@media (max-width: 580px) {
   .body-cv {
     width: 500px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
 }
-@media (max-height: 770px) {
+@media (max-height: 790px) {
+  
+  .print-btn{
+    margin-top: 50px;
+  }
+}
+@media (max-height: 690px) {
   
   .print-btn{
     margin-top: 100px;
   }
+}
+@media (max-width: 580px) {
+.container{
+  transform: scale(0.7, 0.7);
+
+}
+.body-cv {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 100%;
+}
+header{
+  transform: scale(0.7, 0.7);
+}
+/* .h2,
+.h1, 
+.span, 
+.section,
+.header,
+ 
+.header, 
+.header ul, 
+.header li, 
+.address,
+.cv-icon, 
+.address-icon, 
+.section-icon, 
+.title, 
+.name, 
+.print-btn, 
+.print-btn:active {
+  transform: scale(0.5);
+
+} */
 }
