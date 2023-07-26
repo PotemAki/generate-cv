@@ -73,7 +73,7 @@ var OutputPageComponent = /** @class */ (function () {
         this.link = '';
         this.linkName = '';
         this.dropdownEnclosure = 'add';
-        this.enclosure = 'I hereby give consent for my personal data included in the application to be processed by (company name) for the purposes of the recruitment process.';
+        this.enclosure = 'I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.';
         this.previewUrl = this.dataService.previewUrl;
     }
     OutputPageComponent.prototype.ngOnInit = function () {
@@ -166,7 +166,7 @@ var OutputPageComponent = /** @class */ (function () {
         var options = {
             filename: 'Generated-CV.pdf',
             image: { type: 'jpeg', quality: 2 },
-            html2canvas: { scale: 2 },
+            html2canvas: { scale: 3 },
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
             enableLinks: true,
             pagebreak: { mode: 'avoid-all' }

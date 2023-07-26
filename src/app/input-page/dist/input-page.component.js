@@ -55,9 +55,12 @@ var InputPageComponent = /** @class */ (function () {
             animations: [
                 animations_1.trigger('fadeInOut', [
                     animations_1.state('void', animations_1.style({ opacity: 0, backgroundColor: 'transparent' })),
-                    animations_1.transition('void <=> *', [
+                    animations_1.transition('void => *', [
                         animations_1.animate(200, animations_1.style({ opacity: 1, backgroundColor: 'white' }))
-                    ])
+                    ]),
+                    animations_1.transition('* => void', [
+                        animations_1.animate(0, animations_1.style({ opacity: 1, backgroundColor: 'white' }))
+                    ]),
                 ])
             ]
         })

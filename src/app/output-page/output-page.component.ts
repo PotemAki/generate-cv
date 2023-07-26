@@ -78,7 +78,7 @@ export class OutputPageComponent implements OnInit, OnDestroy{
     link = '';
     linkName = '';
     dropdownEnclosure = 'add';
-    enclosure = 'I hereby give consent for my personal data included in the application to be processed by (company name) for the purposes of the recruitment process.'
+    enclosure = 'I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.'
   
     @ViewChild('myCV', { static: true }) myTempRef!: ElementRef;
   constructor(private dataService: DataService
@@ -183,11 +183,11 @@ export class OutputPageComponent implements OnInit, OnDestroy{
     const element = document.getElementById('printCV');
     const options = {
       filename: 'Generated-CV.pdf',
-      image: { type: 'jpeg', quality: 2 }, // Optional: Set image quality if you have images in the content
-      html2canvas: { scale: 2 }, // Optional: Set scaling if needed
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }, // Optional: Set PDF format and orientation
+      image: { type: 'jpeg', quality: 2 }, 
+      html2canvas: { scale: 3 }, 
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }, 
       enableLinks: true,
-      pagebreak: { mode: 'avoid-all'}
+      pagebreak: { mode: 'avoid-all'},
     };
 
     html2pdf().set(options).from(element).save();

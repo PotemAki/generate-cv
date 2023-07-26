@@ -8,6 +8,8 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./additional-details.component.css']
 })
 export class AdditionalDetailsComponent {
+  message = '';
+  isTimeOut: any;
   @ViewChild('a') a: any;
   isPlus1 = false;
   isPlus2 = false;
@@ -17,6 +19,7 @@ export class AdditionalDetailsComponent {
   infoPlus3 = false;
   selectedOption = 'add'
   addLink = false
+  enclosure = 'I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.'
 
   constructor(private dataService: DataService) { }
 
@@ -44,6 +47,11 @@ export class AdditionalDetailsComponent {
 
   getAdditionalDetails(a: NgForm) {
     this.dataService.addAdditionalInfo(a)
+    this.message = 'Your additional info added!'
+    clearTimeout(this.isTimeOut)
+    this.isTimeOut = setTimeout(() => {
+      this.message = '';
+    }, 1000)
   }
   resetButton() {
     this.a.resetForm();

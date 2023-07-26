@@ -4,6 +4,7 @@
   margin-top: 50px;
   margin: 20px;
   width: 1000px;
+  min-height: 1200px;
   background-color: rgb(255, 255, 255);
   max-height: 800px;
   overflow: auto;
@@ -29,7 +30,7 @@ header {
 }
 .container {
   box-shadow: 0 0 20px grey;
-  width: 100%;
+  width: 90%;
   margin: 0 auto 0 auto;
 }
 header {
@@ -88,8 +89,11 @@ address{
   .body-cv {
     width: 800px;
     margin-top: 50px;
+    min-height: 0;
   }
-
+  .container {
+    width: 100%;
+}
 }
 @media (max-width: 770px) {
   .body-cv {
@@ -131,24 +135,4 @@ address{
 header{
   transform: scale(0.7, 0.7);
 }
-/* .h2,
-.h1, 
-.span, 
-.section,
-.header,
- 
-.header, 
-.header ul, 
-.header li, 
-.address,
-.cv-icon, 
-.address-icon, 
-.section-icon, 
-.title, 
-.name, 
-.print-btn, 
-.print-btn:active {
-  transform: scale(0.5);
-
-} */
 }

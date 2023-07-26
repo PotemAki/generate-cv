@@ -6,7 +6,7 @@
   <div class="container" id="printCV">
     
     <header>
-      <img *ngIf="!previewUrl" class="cv-icon2" src="assets/cv.png" width="100px"/>
+      <!-- <img *ngIf="!previewUrl" class="cv-icon2" src="assets/cv.png" width="100px"/> -->
       <img *ngIf="previewUrl" class="cv-icon" [src]="previewUrl" width="100px"/>
       <div>
       <h1 class="name">{{userName}} {{userSurname}}</h1>
@@ -126,7 +126,7 @@
         </ul>
     </section>
   
-    <section *ngIf="dropdownEnclosure === 'add'">
+    <section>
         <hr>
         <p *ngIf="enclosure">
             {{enclosure}}

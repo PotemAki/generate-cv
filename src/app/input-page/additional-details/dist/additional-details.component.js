@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var AdditionalDetailsComponent = /** @class */ (function () {
     function AdditionalDetailsComponent(dataService) {
         this.dataService = dataService;
+        this.message = '';
         this.isPlus1 = false;
         this.isPlus2 = false;
         this.isPlus3 = false;
@@ -19,6 +20,7 @@ var AdditionalDetailsComponent = /** @class */ (function () {
         this.infoPlus3 = false;
         this.selectedOption = 'add';
         this.addLink = false;
+        this.enclosure = 'I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.';
     }
     AdditionalDetailsComponent.prototype.onPlus1 = function () {
         this.isPlus1 = !this.isPlus1;
@@ -42,7 +44,13 @@ var AdditionalDetailsComponent = /** @class */ (function () {
         this.addLink = !this.addLink;
     };
     AdditionalDetailsComponent.prototype.getAdditionalDetails = function (a) {
+        var _this = this;
         this.dataService.addAdditionalInfo(a);
+        this.message = 'Your additional info added!';
+        clearTimeout(this.isTimeOut);
+        this.isTimeOut = setTimeout(function () {
+            _this.message = '';
+        }, 1000);
     };
     AdditionalDetailsComponent.prototype.resetButton = function () {
         this.a.resetForm();

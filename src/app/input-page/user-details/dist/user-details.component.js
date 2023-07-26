@@ -12,12 +12,19 @@ var UserDetailsComponent = /** @class */ (function () {
     function UserDetailsComponent(dataService, http) {
         this.dataService = dataService;
         this.http = http;
+        this.message = '';
         this.selectedOption = 'add';
         this.previewUrl = null;
     }
     UserDetailsComponent.prototype.getUserDetails = function (form) {
+        var _this = this;
         this.dataService.addUserData(form);
         this.dataService.addUserPhoto(this.previewUrl);
+        this.message = 'Your details added!';
+        clearTimeout(this.isTimeOut);
+        this.isTimeOut = setTimeout(function () {
+            _this.message = '';
+        }, 1000);
     };
     //photo related:
     UserDetailsComponent.prototype.onFileSelected = function (event) {

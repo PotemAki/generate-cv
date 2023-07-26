@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DataService } from 'src/app/data.service';
 
@@ -7,7 +7,9 @@ import { DataService } from 'src/app/data.service';
   templateUrl: './experience-details.component.html',
   styleUrls: ['./experience-details.component.css']
 })
-export class ExperienceDetailsComponent implements OnInit{
+export class ExperienceDetailsComponent {
+  message = '';
+  isTimeOut: any;
   isMoreJobs = false;
   buttonContent = 'Add more jobs'
   isPlus1 = false;
@@ -16,9 +18,7 @@ export class ExperienceDetailsComponent implements OnInit{
   expForm: NgForm 
   constructor(private dataService: DataService) { }
 
-  ngOnInit() {
-    
-  }
+
   moreJobs() {
     
     if (this.isMoreJobs) {
@@ -41,6 +41,11 @@ export class ExperienceDetailsComponent implements OnInit{
 
   getEduDetails(w: NgForm) {
     this.dataService.addWorkData(w)
+    this.message = 'Your experience added!'
+    clearTimeout(this.isTimeOut)
+    this.isTimeOut = setTimeout(() => {
+      this.message = '';
+    }, 1000);
   }
   resetButton() {
     this.w.resetForm()

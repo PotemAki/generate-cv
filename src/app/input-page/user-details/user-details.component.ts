@@ -9,6 +9,8 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent {
+  message = '';
+  isTimeOut: any;
   selectedOption = 'add'
   imageUrl: string
   previewUrl: string | ArrayBuffer | null = null;
@@ -19,6 +21,11 @@ export class UserDetailsComponent {
   getUserDetails(form: NgForm) {
     this.dataService.addUserData(form)
     this.dataService.addUserPhoto(this.previewUrl)
+    this.message = 'Your details added!'
+    clearTimeout(this.isTimeOut)
+    this.isTimeOut = setTimeout(() => {
+      this.message = '';
+    }, 1000);
   }
   //photo related:
   onFileSelected(event: any) {

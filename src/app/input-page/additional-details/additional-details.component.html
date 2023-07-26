@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col-md-6">
+    <div class="message-container" *ngIf="message">
+      <span class="message">{{message}}</span>
+    </div>
     <form (ngSubmit)="getAdditionalDetails(a)" #a="ngForm">
       <div class="form-group">
         <li class="list-group-item">
@@ -92,14 +95,14 @@
                     class="form-control card-move card-input-course input-link" 
                     name="link"
                     ngModel
-                    maxlength="50"
+                    maxlength="90"
                     placeholder="Put link to your portfolio here.">
                   <input 
                     type="text" 
                     class="form-control card-move card-input-course input-link" 
                     name="linkname"
                     ngModel
-                    maxlength="50"
+                    maxlength="90"
                     placeholder="Display name of this link.">
                   </div>
                   <input *ngIf="!addLink"
@@ -107,47 +110,47 @@
                     class="form-control card-move card-input-course" 
                     name="info1"
                     ngModel
-                    maxlength="50"
+                    maxlength="90"
                     placeholder="E.g. Driving license, category B.">
                     <input 
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info2"
                     ngModel
-                    maxlength="50"
+                    maxlength="90"
                     placeholder="E.g. Respect and responsible approach to the work performed, punctuality">
                     <input 
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info3"
                     ngModel
-                    maxlength="50"
+                    maxlength="90"
                     placeholder="E.g. Professional knowledge of Excel">
                     <input 
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info4"
                     ngModel
-                    maxlength="50"
+                    maxlength="90"
                     placeholder="E.g. Punctuality">
                     <input *ngIf="infoPlus1"
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info5"
                     ngModel
-                    maxlength="50">
+                    maxlength="90">
                     <input *ngIf="infoPlus2"
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info6"
                     ngModel
-                    maxlength="50">
+                    maxlength="90">
                     <input *ngIf="infoPlus3"
                     type="text" 
                     class="form-control card-move card-input-course" 
                     name="info7"
                     ngModel
-                    maxlength="50">
+                    maxlength="90">
                     <button *ngIf="!infoPlus1" type="button" class="btn plusButton btn-secondary" (click)="infoOnPlus1()">+</button>
                     <button *ngIf="infoPlus1 && !infoPlus2" type="button" class="btn plusButton btn-secondary" (click)="infoOnPlus2()">+</button>
                     <button *ngIf="infoPlus1 && !infoPlus2" type="button" class="btn plusButton btn-secondary" (click)="infoOnPlus1()">-</button>
@@ -167,8 +170,8 @@
                   name="enclosure"
                   ngModel
                   maxlength="300"
-                  placeholder="I hereby give consent for my personal data included in the application to be processed by (company name) for the purposes of the recruitment process."
-                ></textarea>
+                  [(ngModel)]="enclosure"
+                >{{enclosure}}</textarea>
               </div>
               <hr>
               <button class="delete-button" type="button" (click)="resetButton()">Reset</button>

@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col-md-6">
+    <div class="message-container" *ngIf="message">
+      <span class="message">{{message}}</span>
+    </div>
     <form (ngSubmit)="getEduDetails(w)" #w="ngForm">
       <div class="form-group">
         <li class="list-group-item">

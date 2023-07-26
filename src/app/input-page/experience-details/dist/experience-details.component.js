@@ -11,13 +11,12 @@ var core_1 = require("@angular/core");
 var ExperienceDetailsComponent = /** @class */ (function () {
     function ExperienceDetailsComponent(dataService) {
         this.dataService = dataService;
+        this.message = '';
         this.isMoreJobs = false;
         this.buttonContent = 'Add more jobs';
         this.isPlus1 = false;
         this.isPlus2 = false;
     }
-    ExperienceDetailsComponent.prototype.ngOnInit = function () {
-    };
     ExperienceDetailsComponent.prototype.moreJobs = function () {
         if (this.isMoreJobs) {
             this.isMoreJobs = false;
@@ -37,7 +36,13 @@ var ExperienceDetailsComponent = /** @class */ (function () {
         this.isPlus2 = !this.isPlus2;
     };
     ExperienceDetailsComponent.prototype.getEduDetails = function (w) {
+        var _this = this;
         this.dataService.addWorkData(w);
+        this.message = 'Your experience added!';
+        clearTimeout(this.isTimeOut);
+        this.isTimeOut = setTimeout(function () {
+            _this.message = '';
+        }, 1000);
     };
     ExperienceDetailsComponent.prototype.resetButton = function () {
         this.w.resetForm();

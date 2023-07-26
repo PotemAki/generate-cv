@@ -11,10 +11,17 @@ var core_1 = require("@angular/core");
 var EducationDetailsComponent = /** @class */ (function () {
     function EducationDetailsComponent(dataService) {
         this.dataService = dataService;
+        this.message = '';
         this.selectedOption = 'edu';
     }
     EducationDetailsComponent.prototype.getEduDetails = function (e) {
+        var _this = this;
         this.dataService.addEduData(e);
+        this.message = 'Your education added!';
+        clearTimeout(this.isTimeOut);
+        this.isTimeOut = setTimeout(function () {
+            _this.message = '';
+        }, 1000);
     };
     EducationDetailsComponent.prototype.resetButton = function () {
         this.e.resetForm();
