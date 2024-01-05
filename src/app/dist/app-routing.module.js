@@ -9,13 +9,11 @@ exports.__esModule = true;
 exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var not_found_component_1 = require("./page-not-found/not-found/not-found.component");
-var input_page_component_1 = require("./input-page/input-page.component");
 var routes = [
-    { path: '', redirectTo: '/generate', pathMatch: 'full' },
-    { path: "generate", component: input_page_component_1.InputPageComponent },
-    // { path: 'output', component: OutputPageComponent},
-    { path: 'not-found', component: not_found_component_1.NotFoundComponent },
+    // { path: '', redirectTo: '/generate', pathMatch: 'full'},
+    // { path: "generate", component: InputPageComponent },
+    // // { path: 'output', component: OutputPageComponent},
+    // { path: 'not-found', component: NotFoundComponent },
     { path: '**', redirectTo: '/not-found' }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -23,7 +21,7 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes, { useHash: true })],
+            imports: [router_1.RouterModule.forRoot(routes)],
             exports: [router_1.RouterModule]
         })
     ], AppRoutingModule);

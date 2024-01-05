@@ -7,15 +7,15 @@ import { OutputPageComponent } from './output-page/output-page.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/generate', pathMatch: 'full'},
-  { path: "generate", component: InputPageComponent },
-  // { path: 'output', component: OutputPageComponent},
-  { path: 'not-found', component: NotFoundComponent },
+  // { path: '', redirectTo: '/generate', pathMatch: 'full'},
+  // { path: "generate", component: InputPageComponent },
+  // // { path: 'output', component: OutputPageComponent},
+  // { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: '/not-found'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
