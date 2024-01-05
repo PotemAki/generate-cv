@@ -159,6 +159,8 @@ input.ng-invalid.ng-touched {
   .card-edu,
   .card-input-school-name,
   .card-input-school-type,
+  .card-input-lang-name,
+  .card-input-lang-level,
   .card-input-course {
     width: 100%;
   }

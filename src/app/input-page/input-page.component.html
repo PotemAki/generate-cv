@@ -8,7 +8,7 @@
       <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton2}" (click)="activateButton2()">Education</button>
       <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton3}" (click)="activateButton3()">Work Experience</button>
       <button type="button" class="btn btn-secondary" [ngClass]="{active: isActiveButton4}" (click)="activateButton4()">Additional informations</button>
-      <button type="button" class="btn btn-secondary generate" [ngClass]="{activeGenerate: isGenerating}" (click)="generateButton()">Generate CV</button>
+      <button type="button" class="btn btn-secondary generate" (click)="generateButton()">Generate CV</button>
     </div>
     <div class="components">
       <app-user-details [@fadeInOut]="isActiveButton1" *ngIf="isActiveButton1"></app-user-details>
@@ -16,12 +16,12 @@
       <app-experience-details [@fadeInOut]="isActiveButton3" *ngIf="isActiveButton3"></app-experience-details>
       <app-additional-details [@fadeInOut]="isActiveButton4" *ngIf="isActiveButton4"></app-additional-details>
     </div>
-    <div class="popup-container" *ngIf="isGenerating">
+    <!-- <div class="popup-container" *ngIf="isGenerating">
       <div class="popup-content">
       <app-output-page (closeButton)="closeButton1()"></app-output-page>
       
       </div>
-    </div>
+    </div> -->
     
   </div>
   </div>

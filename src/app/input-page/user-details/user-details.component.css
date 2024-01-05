@@ -82,11 +82,9 @@
   cursor: pointer;
 }
 .delete-photo{
-  position: absolute;
-  bottom: 88px;
-  right: 250px;
   background: none;
   border: none;
+  padding: 5px;
   font-weight: bold;
   font-size: 24px;
   color: #999;
@@ -97,6 +95,9 @@
 }
 .delete-button:hover {
   color: #ff0000;
+}
+.photo-input{
+  display: flex;
 }
 input.ng-invalid.ng-touched {
   border: 2px solid red;

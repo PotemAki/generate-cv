@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { DialogService } from './dialog.service';
+
 
 @Component({
   selector: 'app-input-page',
@@ -19,11 +21,14 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class InputPageComponent {
 
+  constructor(private dialogService: DialogService ) {
+   }
+
   isActiveButton1 = true
   isActiveButton2 = false
   isActiveButton3 = false
   isActiveButton4 = false
-  isGenerating = false
+
   activateButton1() {
     this.isActiveButton1 = true
     this.isActiveButton2 = false
@@ -49,10 +54,11 @@ export class InputPageComponent {
     this.isActiveButton4 = true
   }
   generateButton() {
-    this.isGenerating = true
+   this.dialogService.openGenerate()
+   
   }
   closeButton1() {
-    this.isGenerating = false
+    // this.isGenerating = false
    
   }
   

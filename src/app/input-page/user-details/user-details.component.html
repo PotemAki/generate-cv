@@ -33,7 +33,7 @@
                     placeholder="Enter your surname">
                 </div>
                 <div class="col">
-                  <label for="nameInput" class="card-title">Your Postition</label>
+                  <label for="nameInput" class="card-title">Postition</label>
                   <input 
                     type="text" 
                     class="form-control card-move card-input" 
@@ -111,7 +111,8 @@
             </div>
             <div class="col">
               <label for="picture" class="card-title">Add your photo or use default icon.</label>
-              <input 
+              <div class="photo-input">
+                <input 
                 type="file" 
                 class="form-control card-move card-photo" 
                 name="photo"
@@ -121,6 +122,7 @@
                 (change)="onFileSelected($event)"
                 #photoInput>
                 <button class="delete-photo" type="button" (click)="deletePhoto()">X</button>
+              </div>
             </div>
             <button type="submit" class="btn btn-secondary" 
             [disabled]="!u.valid"

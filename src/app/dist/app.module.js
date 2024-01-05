@@ -23,6 +23,8 @@ var education_details_component_1 = require("./input-page/education-details/educ
 var experience_details_component_1 = require("./input-page/experience-details/experience-details.component");
 var additional_details_component_1 = require("./input-page/additional-details/additional-details.component");
 var animations_1 = require("@angular/platform-browser/animations");
+var dialog_1 = require("@angular/material/dialog");
+var ngx_print_1 = require("ngx-print");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -37,7 +39,7 @@ var AppModule = /** @class */ (function () {
                 user_details_component_1.UserDetailsComponent,
                 education_details_component_1.EducationDetailsComponent,
                 experience_details_component_1.ExperienceDetailsComponent,
-                additional_details_component_1.AdditionalDetailsComponent
+                additional_details_component_1.AdditionalDetailsComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -46,7 +48,9 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 http_1.HttpClientModule,
                 ng_bootstrap_1.NgbDropdownModule,
-                animations_1.BrowserAnimationsModule
+                animations_1.BrowserAnimationsModule,
+                dialog_1.MatDialogModule,
+                ngx_print_1.NgxPrintModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

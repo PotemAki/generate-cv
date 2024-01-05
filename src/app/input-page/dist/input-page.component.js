@@ -10,12 +10,12 @@ exports.InputPageComponent = void 0;
 var core_1 = require("@angular/core");
 var animations_1 = require("@angular/animations");
 var InputPageComponent = /** @class */ (function () {
-    function InputPageComponent() {
+    function InputPageComponent(dialogService) {
+        this.dialogService = dialogService;
         this.isActiveButton1 = true;
         this.isActiveButton2 = false;
         this.isActiveButton3 = false;
         this.isActiveButton4 = false;
-        this.isGenerating = false;
     }
     InputPageComponent.prototype.activateButton1 = function () {
         this.isActiveButton1 = true;
@@ -42,10 +42,10 @@ var InputPageComponent = /** @class */ (function () {
         this.isActiveButton4 = true;
     };
     InputPageComponent.prototype.generateButton = function () {
-        this.isGenerating = true;
+        this.dialogService.openGenerate();
     };
     InputPageComponent.prototype.closeButton1 = function () {
-        this.isGenerating = false;
+        // this.isGenerating = false
     };
     InputPageComponent = __decorate([
         core_1.Component({

@@ -1,8 +1,9 @@
-import { Component, ElementRef, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 import * as html2pdf from 'html2pdf.js';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { Subject } from 'rxjs';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-output-page',
@@ -81,8 +82,9 @@ export class OutputPageComponent implements OnInit, OnDestroy{
     enclosure = 'I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.'
   
     @ViewChild('myCV', { static: true }) myTempRef!: ElementRef;
-  constructor(private dataService: DataService
-          ) { 
+  constructor(private dataService: DataService,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+  private dialogRef: MatDialogRef<OutputPageComponent>) { 
     this.previewUrl = this.dataService.previewUrl;
   }
 
@@ -198,6 +200,9 @@ export class OutputPageComponent implements OnInit, OnDestroy{
     this.eduSub.unsubscribe;
     this.workSub.unsubscribe;
     this.infoSub.unsubscribe
+  }
+  closeDialog(): void {
+    this.dialogRef.close();
   }
 }
 

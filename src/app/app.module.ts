@@ -14,6 +14,8 @@ import { EducationDetailsComponent } from './input-page/education-details/educat
 import { ExperienceDetailsComponent } from './input-page/experience-details/experience-details.component';
 import { AdditionalDetailsComponent } from './input-page/additional-details/additional-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgxPrintModule } from 'ngx-print';
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserDetailsComponent,
     EducationDetailsComponent,
     ExperienceDetailsComponent,
-    AdditionalDetailsComponent
+    AdditionalDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +37,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     NgbDropdownModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    NgxPrintModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

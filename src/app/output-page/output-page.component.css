@@ -1,15 +1,21 @@
+.dialog-container {
+  padding-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .body-cv {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  margin: 20px;
-  width: 1000px;
   background-color: rgb(255, 255, 255);
-  max-height: 800px;
+  max-height: 1000px;
+  max-width: 1200px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
 }
 
 h2 {
@@ -19,35 +25,42 @@ h2 {
 h1 {
   font-size: 36px;
 }
+
 span {
   color: grey;
 }
+
 section,
 header {
   padding: 10px 60px 20px 60px;
   background-color: white;
 }
+
 .container {
   box-shadow: 0 0 20px grey;
-  width: 90%;
+  width: 95%;
   margin: 0 auto 0 auto;
 }
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 header ul {
   list-style: none;
 }
-header li {
 
+header li {
   margin-bottom: 15px;
 }
-address{
+
+address {
   margin-top: 20px;
   margin-left: -10px;
 }
+
 .cv-icon {
   width: 200px;
   height: 200px;
@@ -55,83 +68,72 @@ address{
   margin-right: 20px;
   margin-left: -30px;
 }
+
 .address-icon {
   margin-right: 10px;
   width: 30px;
   height: 30px;
   vertical-align: middle;
 }
+
 .section-icon {
   margin-right: 10px;
   width: 35px;
   height: 35px;
   vertical-align: middle;
 }
+
 .title {
   margin-bottom: -40px;
 }
+
 .name {
   margin-bottom: 10px;
   font-size: 40px;
   display: flex;
   align-items: center;
 }
+
 .print-btn {
   width: 200px;
   margin-bottom: 10px;
   margin-right: 5px;
 }
+
 .print-btn:active {
   background-color: rgb(161, 22, 22);
 }
+
 @media (max-width: 1000px) {
-  .body-cv {
-    width: 800px;
-    margin-top: 50px;
-   
-  }
   .container {
+    box-shadow: none;
     width: 100%;
-}
-}
-@media (max-width: 770px) {
+    margin: 0 auto 0 auto;
+    transform: scale(0.8, 0.8);
+  }
   .body-cv {
-    width: 800px;
-    margin-top: 50px;
+    justify-content: flex-start;
+    padding-top: 0px;
   }
+  header {
+    width: 100%;
+  }
+}
 
-}
-@media (max-width: 580px) {
-  .body-cv {
-    width: 500px;
-    margin-top: 30px;
+@media (max-width: 670px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
+}
 
-}
-@media (max-height: 790px) {
-  
-  .print-btn{
-    margin-top: 50px;
+@media (max-width: 621px) {
+  main {
+    font-size: 90%;
+    padding: 0px;
   }
-}
-@media (max-height: 690px) {
-  
-  .print-btn{
-    margin-top: 100px;
+  .cv-icon {
+    display: none;
   }
-}
-@media (max-width: 580px) {
-.container{
-  transform: scale(0.7, 0.7);
-
-}
-.body-cv {
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 100%;
-}
-header{
-  transform: scale(0.7, 0.7);
-}
 }
