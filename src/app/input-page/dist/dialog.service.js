@@ -16,7 +16,7 @@ var DialogService = /** @class */ (function () {
     DialogService.prototype.openGenerate = function () {
         this.dialog.open(output_page_component_1.OutputPageComponent, {
             height: '85%',
-            maxWidth: '99%'
+            maxWidth: '100%'
         });
     };
     DialogService = __decorate([

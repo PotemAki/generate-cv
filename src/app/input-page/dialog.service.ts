@@ -13,7 +13,7 @@ export class DialogService {
   openGenerate(): void {
     this.dialog.open(OutputPageComponent, {
       height: '85%',
-      maxWidth: '99%'
+      maxWidth: '100%'
     });
   }
 }
