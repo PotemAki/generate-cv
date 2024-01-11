@@ -39,9 +39,10 @@
 }
 .card{
   width: 700px;
+  transition: 0.3s;
 }
 .card-move:hover {
-  transform: translateY(-5px);
+  background-color: #f3f3f3;
 }
 .card-title {
   color: #333;

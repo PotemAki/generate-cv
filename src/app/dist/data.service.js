@@ -17,6 +17,7 @@ var DataService = /** @class */ (function () {
         this.eduData = new rxjs_1.BehaviorSubject(null);
         this.workData = new rxjs_1.BehaviorSubject(null);
         this.infoData = new rxjs_1.BehaviorSubject(null);
+        this.moveToNextButton = new rxjs_1.Subject();
     }
     DataService.prototype.addUserData = function (form) {
         this.expForm = form;

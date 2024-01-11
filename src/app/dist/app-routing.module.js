@@ -14,7 +14,7 @@ var routes = [
     // { path: "generate", component: InputPageComponent },
     // // { path: 'output', component: OutputPageComponent},
     // { path: 'not-found', component: NotFoundComponent },
-    { path: '**', redirectTo: '/not-found' }
+    { path: '**', redirectTo: '' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

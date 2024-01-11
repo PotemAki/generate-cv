@@ -25,6 +25,7 @@ var UserDetailsComponent = /** @class */ (function () {
         this.isTimeOut = setTimeout(function () {
             _this.message = '';
         }, 1000);
+        this.dataService.moveToNextButton.next('button2');
     };
     //photo related:
     UserDetailsComponent.prototype.onFileSelected = function (event) {

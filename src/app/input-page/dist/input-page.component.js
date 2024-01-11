@@ -10,13 +10,31 @@ exports.InputPageComponent = void 0;
 var core_1 = require("@angular/core");
 var animations_1 = require("@angular/animations");
 var InputPageComponent = /** @class */ (function () {
-    function InputPageComponent(dialogService) {
+    function InputPageComponent(dialogService, dataService) {
         this.dialogService = dialogService;
+        this.dataService = dataService;
         this.isActiveButton1 = true;
         this.isActiveButton2 = false;
         this.isActiveButton3 = false;
         this.isActiveButton4 = false;
     }
+    InputPageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.moveToNextButton.subscribe(function (button) {
+            if (button === 'button2') {
+                _this.activateButton2();
+            }
+            else if (button === 'button3') {
+                _this.activateButton3();
+            }
+            else if (button === 'button4') {
+                _this.activateButton4();
+            }
+            else if (button === 'button5') {
+                _this.generateButton();
+            }
+        });
+    };
     InputPageComponent.prototype.activateButton1 = function () {
         this.isActiveButton1 = true;
         this.isActiveButton2 = false;

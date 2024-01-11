@@ -44,13 +44,13 @@ var AdditionalDetailsComponent = /** @class */ (function () {
         this.addLink = !this.addLink;
     };
     AdditionalDetailsComponent.prototype.getAdditionalDetails = function (a) {
-        var _this = this;
         this.dataService.addAdditionalInfo(a);
-        this.message = 'Your additional info added!';
-        clearTimeout(this.isTimeOut);
-        this.isTimeOut = setTimeout(function () {
-            _this.message = '';
-        }, 1000);
+        // this.message = 'Your additional info added!'
+        // clearTimeout(this.isTimeOut)
+        // this.isTimeOut = setTimeout(() => {
+        //   this.message = '';
+        // }, 1000)
+        this.dataService.moveToNextButton.next('button5');
     };
     AdditionalDetailsComponent.prototype.resetButton = function () {
         this.a.resetForm();

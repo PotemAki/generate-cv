@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { DialogService } from './dialog.service';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -19,15 +20,29 @@ import { DialogService } from './dialog.service';
     ])
   ]
 })
-export class InputPageComponent {
+export class InputPageComponent implements OnInit{
 
-  constructor(private dialogService: DialogService ) {
+  constructor(private dialogService: DialogService, private dataService: DataService ) {
    }
 
   isActiveButton1 = true
   isActiveButton2 = false
   isActiveButton3 = false
   isActiveButton4 = false
+
+  ngOnInit() {
+    this.dataService.moveToNextButton.subscribe((button) =>{
+      if (button === 'button2') {
+        this.activateButton2()
+      } else if (button === 'button3') {
+        this.activateButton3()
+      } else if (button === 'button4') {
+        this.activateButton4()
+      } else if (button === 'button5') {
+        this.generateButton()
+      }
+    })
+  }
 
   activateButton1() {
     this.isActiveButton1 = true

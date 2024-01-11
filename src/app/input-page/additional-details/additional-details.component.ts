@@ -47,11 +47,12 @@ export class AdditionalDetailsComponent {
 
   getAdditionalDetails(a: NgForm) {
     this.dataService.addAdditionalInfo(a)
-    this.message = 'Your additional info added!'
-    clearTimeout(this.isTimeOut)
-    this.isTimeOut = setTimeout(() => {
-      this.message = '';
-    }, 1000)
+    // this.message = 'Your additional info added!'
+    // clearTimeout(this.isTimeOut)
+    // this.isTimeOut = setTimeout(() => {
+    //   this.message = '';
+    // }, 1000)
+    this.dataService.moveToNextButton.next('button5')
   }
   resetButton() {
     this.a.resetForm();

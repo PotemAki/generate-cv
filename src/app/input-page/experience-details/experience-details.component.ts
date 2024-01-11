@@ -46,6 +46,7 @@ export class ExperienceDetailsComponent {
     this.isTimeOut = setTimeout(() => {
       this.message = '';
     }, 1000);
+    this.dataService.moveToNextButton.next('button4')
   }
   resetButton() {
     this.w.resetForm()

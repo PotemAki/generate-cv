@@ -11,7 +11,7 @@ const routes: Routes = [
   // { path: "generate", component: InputPageComponent },
   // // { path: 'output', component: OutputPageComponent},
   // { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: '/not-found'}
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

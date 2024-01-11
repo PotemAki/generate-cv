@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { OutputPageComponent } from '../output-page/output-page.component';
+import { bottom } from '@popperjs/core';
 
 
 @Injectable({
@@ -11,7 +12,7 @@ export class DialogService {
 
   openGenerate(): void {
     this.dialog.open(OutputPageComponent, {
-      height: '95%',
+      height: '85%',
       maxWidth: '99%'
     });
   }

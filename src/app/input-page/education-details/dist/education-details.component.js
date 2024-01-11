@@ -22,6 +22,7 @@ var EducationDetailsComponent = /** @class */ (function () {
         this.isTimeOut = setTimeout(function () {
             _this.message = '';
         }, 1000);
+        this.dataService.moveToNextButton.next('button3');
     };
     EducationDetailsComponent.prototype.resetButton = function () {
         this.e.resetForm();

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Subject } from "rxjs";
 import { dataUser, eduData, infoData, jobData } from "./dataUser.model";
 
 
@@ -12,6 +12,7 @@ export class DataService {
   eduData = new BehaviorSubject<eduData>(null)
   workData = new BehaviorSubject<jobData>(null)
   infoData = new BehaviorSubject<infoData>(null)
+  moveToNextButton = new Subject<string>()
   expForm: NgForm
 
   addUserData(form: NgForm) {
@@ -28,6 +29,8 @@ export class DataService {
       form.value.aboutme
     )
     this.userData.next(loadUserData)
+
+
   }
   addUserPhoto(previewUrl: string | ArrayBuffer | null) {
     this._previewUrl = previewUrl

@@ -43,6 +43,7 @@ var ExperienceDetailsComponent = /** @class */ (function () {
         this.isTimeOut = setTimeout(function () {
             _this.message = '';
         }, 1000);
+        this.dataService.moveToNextButton.next('button4');
     };
     ExperienceDetailsComponent.prototype.resetButton = function () {
         this.w.resetForm();

@@ -19,7 +19,9 @@
                     ngModel
                     maxlength="15"
                     required
-                    placeholder="Enter your name">
+                    placeholder="Enter your name"
+                    #nameInput="ngModel">
+                    <span class="help-block" *ngIf="nameInput.invalid && nameInput.touched">Name is required.</span>
                 </div>
                 <div class="col">
                   <label for="surnameInput" class="card-title">Surname</label>
@@ -30,7 +32,9 @@
                     ngModel
                     maxlength="15"
                     required
-                    placeholder="Enter your surname">
+                    placeholder="Enter your surname"
+                    #surnameInput="ngModel">
+                    <span class="help-block" *ngIf="surnameInput.invalid && surnameInput.touched">Surname is required.</span>
                 </div>
                 <div class="col">
                   <label for="nameInput" class="card-title">Postition</label>
@@ -43,6 +47,7 @@
                     placeholder="Enter your position">
                 </div>
               </div>
+              <hr>
               <label for="nameInput" class="category-title" style="margin-top: 10px;">Address details:</label>
               <div class="form-row">
                 <div class="col">
@@ -54,6 +59,7 @@
                     ngModel
                     maxlength="20"
                     required
+                    #address1="ngModel"
                     placeholder="Enter your phone number">
                 </div>
                 <div class="col">
@@ -65,6 +71,7 @@
                     ngModel
                     maxlength="40"
                     required
+                    #address2="ngModel"
                     placeholder="Enter your email">
                 </div>
               </div>
@@ -78,6 +85,7 @@
                     ngModel
                     maxlength="15"
                     required
+                    #address3="ngModel"
                     placeholder="Enter your date of birth">
                 </div>
                 <div class="col">
@@ -89,9 +97,12 @@
                     maxlength="15"
                     ngModel
                     required
+                    #address4="ngModel"
                     placeholder="Enter your city">
                 </div>
               </div>
+              <span class="help-block" *ngIf="(address1.invalid && address1.touched) || (address2.invalid && address2.touched) || (address3.invalid && address3.touched) || (address4.invalid && address4.touched)">Address details are required.</span>
+              <hr>
               <div class="form-group">
                 <label for="surnameInput" class="card-title">About me</label>
                   <select class="form-control card-move card-aboutme" name="dropdown" [(ngModel)]="selectedOption" value="add">
@@ -126,8 +137,8 @@
             </div>
             <button type="submit" class="btn btn-secondary" 
             [disabled]="!u.valid"
-            >Add Your Details</button>
-            <span class="help-block" *ngIf="!u.valid">Please add all required details.</span>
+            >Add Your Details</button> 
+            <span class="help-block2" *ngIf="u.invalid">Please fill all required fields</span>
           </div>
         </li>
       </div>

@@ -19,6 +19,7 @@
                     ngModel
                     maxlength="50"
                     required
+                    #edu1="ngModel"
                     placeholder="E.g: Master in Management">
                     <label for="nameInput" class="card-title">Full facility name:</label>
                     <textarea
@@ -28,7 +29,11 @@
                     ngModel
                     maxlength="90"
                     required
+                    #edu2="ngModel"
                     placeholder="E.g: University of Warsaw"></textarea>
+                    <span class="help-block" *ngIf="(!edu1.valid && edu1.touched) || (!edu2.valid && edu2.touched)">Atleast one eduction type is required.</span>
+                </div>
+                <div class="verticalLine">
                 </div>
                 <div class="col">
                   <label for="nameInput" class="card-title">2. Education type:</label>
@@ -49,6 +54,7 @@
                     placeholder="E.g: Public High School in Warsaw"></textarea>
                 </div>
               </div>
+              <hr>
               <label for="surnameInput" class="card-title">More options?</label>
                   <select 
                   class="form-control card-move card-aboutme" 
@@ -81,6 +87,8 @@
                     ngModel
                     maxlength="90"
                     placeholder="Other"></textarea>
+                </div>
+                <div class="verticalLine">
                 </div>
                 <div class="col">
                   <label for="nameInput" class="card-title">4. Education type:</label>
@@ -141,7 +149,7 @@
             <button type="submit" class="btn btn-secondary" 
             [disabled]="!e.valid"
             >Add Education</button>
-            <span class="help-block" *ngIf="!e.valid">Atleast one eduction type is required.</span>
+            <span class="help-block2" *ngIf="!e.valid">Atleast one eduction type is required.</span>
           </div>
         </li>
       </div>

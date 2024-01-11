@@ -24,6 +24,7 @@ export class EducationDetailsComponent {
     this.isTimeOut = setTimeout(() => {
       this.message = '';
     }, 1000);
+    this.dataService.moveToNextButton.next('button3')
   }
   resetButton() {
     this.e.resetForm();

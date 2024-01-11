@@ -53,9 +53,10 @@
 }
 .card-input{
   width: 200px;
+  transition: 0.3s;
 }
 .card-move:hover {
-  transform: translateY(-5px);
+  background-color: #f3f3f3;
 }
 .card-title {
   color: #333;
@@ -66,6 +67,7 @@
   color: #333;
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 .card-text {
   color: #777;
@@ -100,10 +102,15 @@
   display: flex;
 }
 input.ng-invalid.ng-touched {
-  border: 2px solid red;
+  border: 1px solid red;
 }
 .help-block{
   font-weight: bold;
+  color: #ff0000;
+}
+.help-block2{
+  font-weight: bold;
+  margin-top: 10px;
 }
 .row{
   margin-right: 10px;
